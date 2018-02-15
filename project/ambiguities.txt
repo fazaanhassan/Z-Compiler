@@ -1,0 +1,19 @@
+Paragraph: 14
+Problem: A shift reduce conflict when encountering the difference, intersection and union symbol. 
+Solution: Set precedence of these operations in the grammar
+
+Paragraph: 2
+Problem: 'MINUS expr' fails because we have a reduce-reduce conflict. We can have 'MINUS NOT expr', which is wrong.
+Solution: Use 'operator expr"
+
+Paragraph: 17
+Problem: Input for lambda expressions were thought to be comma seperated with the pipe symbol around them.
+However they are infact seperated by arrows.
+
+Paragraph: 22
+Problem: Assumption that a body cannot be empty (For example after an else statement)
+
+Paragraph: 9
+Problem: Expressions cannot be on the lefthand side of an equal side. For example to access a value in
+a dictionary you require an expression. But these are also on the right hand side/
+Solution: introduce new production: 'nested_id index EQUAL expr SEMICOL'
